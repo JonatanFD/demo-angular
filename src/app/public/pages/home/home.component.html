@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" style="gap: 8px;">
+  <span>Ember</span>
+  <span class="spacer"></span>
+  <app-language-switcher></app-language-switcher>
+  <a mat-button aria-label="Example icon-button with menu icon"> {{ "home" | translate }} </a>
+  <a mat-button aria-label="Example icon-button with more_vert icon">
+    {{ "bundles" | translate }}
+  </a>
+</mat-toolbar>
+<style>
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+</style>
+<p>home works!</p>

@@ -1,0 +1,16 @@
+{
+  "bundles": [
+    {
+      "id": 1,
+      "name": "Jhon Doe"
+    },
+    {
+      "id": 2,
+      "name": "Sara Smith"
+    },
+    {
+      "id": 3,
+      "name": "Jonatan"
+    }
+  ]
+}
