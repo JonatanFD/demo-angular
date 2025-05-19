@@ -1,0 +1,8 @@
+
+  <app-bundle-browser (fieldChange)="filterBundles($event)"></app-bundle-browser>
+
+  <ul>
+    @for (item of this.bundles; track $index) {
+      <li>{{item.name}}</li>
+    }
+  </ul>

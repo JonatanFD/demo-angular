@@ -7,6 +7,13 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./public/pages/home/home.component').then((m) => m.HomeComponent),
   },
+  {
+    path: 'bundles',
+    loadComponent: () =>
+      import('./public/pages/bundles/bundles.component').then(
+        (m) => m.BundlesComponent
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { BundlesResponse } from './bundle.response';
+import { BundleResponse } from './bundle.response';
 import { map } from 'rxjs';
 import { BundleAssembler } from './bundle.assembler';
+
+/*
+
+      .get<SourcesResponse>(`${this.baseUrl}${this.sourcesEndpoint}`, {
+        params: { apiKey: this.apiKey },
+      })
+
+ */
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +23,12 @@ export class BundleService {
 
   getBundles() {
     return this.http
-      .get<BundlesResponse>(`${this.baseUrl}`)
+      .get<BundleResponse[]>(`${this.baseUrl}`)
       .pipe(
-        map((response) => BundleAssembler.toEntitiesFromResponse(response))
+        map((response) => {
+          console.log('BundlesResponse in service', response);
+          return BundleAssembler.toEntitiesFromResponse(response)
+        })
       );
   }
 }

@@ -4,7 +4,7 @@
 
 export interface BundleResponse {
   id: string
-
+  name: string;
 }
 
 
